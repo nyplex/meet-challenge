@@ -194,6 +194,17 @@ header {
   margin: auto;
   width: 56px;
   margin-top: 110px;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 768px) {
+  .bubble-wrapper {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .bubble-wrapper {
+    margin-top: 64px;
+  }
 }
 .bubble-wrapper .vertical-line {
   height: 84px;
@@ -203,19 +214,32 @@ header {
   opacity: 0.25;
 }
 .bubble-wrapper .circle {
-  border: 1px solid #87879D;
+  border: 1px solid rgba(135, 135, 157, 0.25);
   border-radius: 100%;
   width: 100%;
   height: 56px;
-  opacity: 0.25;
 }
 .bubble-wrapper .circle span {
   line-height: 56px;
-  vertical-align: middle;
   text-align: center;
   display: block;
   color: #87879D;
-  opacity: 1;
+}
+
+.gallery {
+  margin-left: 39px;
+  margin-right: 39px;
+  gap: 11px;
+}
+@media screen and (max-width: 640px) {
+  .gallery {
+    margin-left: 24px;
+    margin-right: 24px;
+    gap: 25px;
+  }
+}
+.gallery img {
+  border-radius: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */
