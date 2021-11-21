@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+body {
+    background-color: #F2F2F2;
+}
+
+/////////////// Colors ///////////////
+$dark-blue: #4D96A9;
+$light-blue: #8FE3F9;
+$dark-purple: #855FB1;
+$light-purple: #D9B8FF;
+$dark-grey: #28283D;
+$light-grey: #87879D;
+$white: #FAFAFA;
+
+/////////////// Fonts and Typography ///////////////
+$red-hat: 'Red Hat Display',
+sans-serif;
+
+%body-text {
+    font-family: $red-hat;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+/////////////// Buttons ///////////////
+.btn {
+    height: 58px;
+    border-radius: 29px;
+    font-family: $red-hat;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    color: #fff;
+
+    span {
+        color: $light-blue;
+        margin-left: 4px;
+    }
+
+    @media screen and(max-width:640px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 16px;
+    }
+}
+
+.btn-blue {
+    background-color: $dark-blue;
+
+    &:hover {
+        background-color: #71C0D4;
+    }
+}
+
+.btn-purple {
+    background-color: $dark-purple;
+
+    &:hover {
+        background-color: #B18BDD;
+    }
+}
+
+.btn-large {
+    width: 193px;
+}
+
+.btn-small {
+    width: 139px;
+}
+
+.btn-top {
+    margin-right: 16px;
+
+    @media screen and(max-width: 640px) {
+        margin-right: auto;
+    }
+}
+
+/////////////// Headings ///////////////
+%headings {
+    font-family: $red-hat;
+    font-weight: 900;
+    color: $dark-grey;
+}
+
+h1 {
+    @extend %headings;
+    font-size: 64px;
+    line-height: 64px;
+    margin-bottom: 34px;
+
+    @media screen and(max-width: 768px) {
+        font-size: 48px;
+        line-height: 48px;
+        margin-bottom: 24px;
+    }
+
+    @media screen and(max-width: 640px) {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+}
+
+h2 {
+    @extend %headings;
+    font-size: 40px;
+    line-height: 44px;
+}
+
+/////////////// Top Logo ///////////////
+.logo {
+    margin-top: 80px;
+    margin-bottom: 108px;
+    width: 119px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 48px;
+        margin-bottom: 64px;
+    }
+
+    @media screen and (max-width: 640px) {
+        margin-bottom: 54px;
+    }
+}
+
+/////////////// Header Section ///////////////
+header {
+    overflow-x: hidden;
+    min-height: 303px;
+}
+
+//BG image on mobile
+.header-background-mobile {
+    margin-bottom: 72px;
+    display: none;
+
+    @media screen and(max-width:640px) {
+        margin-bottom: 48px;
+    }
+
+    @media screen and(max-width: 1140px) {
+        display: block;
+    }
+}
+
+//BG image large screen
+.header-background {
+    display: flex;
+    position: relative;
+    z-index: -1;
+    justify-content: space-around;
+}
+
+%background-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    content: "";
+    width: 394px;
+    height: 303px;
+    top: 0;
+
+    @media screen and (max-width: 1140px) {
+        display: none;
+    }
+}
+
+.header-background::before {
+    @extend %background-header;
+    background-image: url("desktop/image-hero-left.png");
+    left: -32px;
+
+}
+
+.header-background::after {
+    @extend %background-header;
+    background-image: url("desktop/image-hero-right.png");
+    right: -32px;
+}
+
+//Text Content
+.header-content {
+    z-index: 1;
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media screen and(max-width:640px) {
+        padding: 0 24px;
+    }
+
+    p {
+        @extend %body-text;
+        color: $light-grey;
+        margin-bottom: 32px;
+
+        @media screen and(max-width: 768px) {
+            font-size: 16px;
+            line-height: 26px;
+        }
+
+        @media screen and(max-width: 640px) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/////////////// Main Section ///////////////
+.bubble-wrapper {
+    margin: auto;
+    width: 56px;
+    margin-top: 110px;
+    .vertical-line {
+        height: 84px;
+        width: 1px;
+        margin: auto;
+        border-left: 1px solid #87879D;
+        opacity: 0.25;
+    }
+
+    .circle {
+        border: 1px solid #87879D;
+        border-radius: 100%;
+        width: 100%;
+        height: 56px;
+        opacity: 0.25;
+        span {
+            line-height: 56px;
+            vertical-align: middle;
+            text-align: center;
+            display: block;
+            color: #87879D;
+            opacity: 1;
+        }
+    }
+}
