@@ -345,7 +345,7 @@ footer {
 }
 @media screen and (max-width: 640px) {
   .footer-wrapper {
-    max-height: 375px;
+    max-height: 450px;
   }
 }
 
@@ -428,6 +428,7 @@ footer {
 @media screen and (max-width: 640px) {
   .footer-content button {
     margin-bottom: 72px;
+    margin-right: auto;
   }
 }
 

@@ -366,7 +366,7 @@ footer {
         max-height: 768px;
     }
     @media screen and(max-width: 640px) {
-        max-height: 375px;
+        max-height: 450px;
     }
 }
 
@@ -433,6 +433,7 @@ footer {
         }
         @media screen and(max-width: 640px) {
             margin-bottom: 72px;
+            margin-right: auto;
         }
     }
 }
