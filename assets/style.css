@@ -3,7 +3,7 @@ body {
   background-color: #F2F2F2;
 }
 
-.header-content p {
+.footer-content p, .main-content p, .header-content p {
   font-family: "Red Hat Display", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -91,6 +91,28 @@ h1 {
 h2 {
   font-size: 40px;
   line-height: 44px;
+}
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+h3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 4px;
+  color: #4D96A9;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 640px) {
+  h3 {
+    margin-bottom: 24px;
+  }
 }
 
 .logo {
@@ -224,22 +246,189 @@ header {
   text-align: center;
   display: block;
   color: #87879D;
+  font-size: 16px;
+  font-weight: 900;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .gallery {
   margin-left: 39px;
   margin-right: 39px;
+  margin-bottom: 80px;
   gap: 11px;
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    margin-bottom: 48px;
+  }
 }
 @media screen and (max-width: 640px) {
   .gallery {
     margin-left: 24px;
     margin-right: 24px;
+    margin-bottom: 64px;
     gap: 25px;
   }
 }
 .gallery img {
   border-radius: 18px;
+}
+
+.main-content {
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 184px;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .main-content {
+    max-width: 573px;
+    margin-bottom: 192px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .main-content {
+    max-width: 327px;
+    margin-bottom: 176px;
+  }
+}
+.main-content h2 {
+  width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 640px) {
+  .main-content h2 {
+    width: 100%;
+  }
+}
+.main-content p {
+  color: #87879D;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .main-content p {
+    font-size: 16px;
+  }
+}
+
+footer {
+  position: relative;
+}
+
+.bubble-wrapper-footer {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  left: 50%;
+  top: -111px;
+  z-index: 1;
+  transform: translateX(-50%);
+}
+.bubble-wrapper-footer .circle {
+  background-color: #fff;
+}
+
+.footer-wrapper {
+  width: 100%;
+  max-height: 308px;
+  min-height: 308px;
+  background-color: #4D96A9;
+  position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .footer-wrapper {
+    max-height: 768px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-wrapper {
+    max-height: 375px;
+  }
+}
+
+.footer-wrapper::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("desktop/image-footer.jpg");
+  background-size: cover;
+  opacity: 0.1;
+}
+@media screen and (max-width: 1024px) {
+  .footer-wrapper::before {
+    background-image: url("tablet/image-footer.jpg");
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-wrapper::before {
+    background-image: url("mobile/image-footer.jpg");
+  }
+}
+
+.footer-content {
+  padding: 116px 15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: auto;
+}
+@media screen and (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    padding-top: 92px;
+    text-align: center;
+  }
+}
+.footer-content h2 {
+  color: #fff;
+  max-width: 350px;
+}
+@media screen and (max-width: 1024px) {
+  .footer-content h2 {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-content h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+.footer-content p {
+  max-width: 350px;
+  color: #fff;
+}
+@media screen and (max-width: 1024px) {
+  .footer-content p {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-content p {
+    margin-bottom: 32px;
+  }
+}
+.footer-content button {
+  margin-right: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 1024px) {
+  .footer-content button {
+    margin-bottom: 66px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-content button {
+    margin-bottom: 72px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
